@@ -3,6 +3,8 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Whitleys World</title>
+		<link href="https://fonts.googleapis.com/css?family=Amaranth" rel="stylesheet"> 
+		 <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet"> 
 		<style type="text/css">
 			html, body {
             	height: 100%;
@@ -24,29 +26,31 @@
 			.wrapperBanner {
 				width: 80%;
 				height: 100%;
-				min-height: 100px;
+				min-height: 70px;
     			margin: 0 auto;
-    			background-color: red;
+    			background-color: #ff9438;
+    			border-left: 1px dashed #FFDE00;
+    			border-right: 1px dashed #FFDE00;
 			}
 			.contentWrapper{
 				width: 80%;
 				height: 100%;
 				min-height: 100%;
     			margin: 0 auto;
-    			border-left: 1px dashed black;
-    			border-right: 1px dashed black;
 			}
 			.headerBorder{
-				border-bottom: 1px solid black;
+				border-bottom: 1px dashed #FFDE00;
+				background-color: #097054;
 			}
 			.footerBorder{
-				border-top: 1px solid black;
+				background-color: #097054;
+				border-top: 1px dashed #FFDE00;
 			}
 			#header{
-				min-height: 75px;
+				min-height: 70px;
 			}
 			#footer{
-				min-height: 75px;
+				min-height: 70px;
 			}
 			.nav{
 				margin: 0;
@@ -56,6 +60,20 @@
 				float: left;
 				padding: 10px;
 				list-style: none;
+			}
+			.links{
+				font-family: 'Amaranth', sans-serif;
+				text-decoration:none;
+				color: #6599FF;
+			}
+			.contentText{
+				font-family: 'Josefin Sans', sans-serif;
+				margin: 0px 30px 30px 30px;
+				padding-top: 30px;
+			}
+			.headerImg{
+				padding: 20px;
+				margin-left: 50px;
 			}
 		</style>
 		<!--[if lte IE 6]>
@@ -70,23 +88,30 @@
 		<div id='page' class='outer'> 
 			<div id='header' class='inner headerBorder'>
 				<div id='headerBanner' class='wrapperBanner'>
-					<img src='' alt='whitleys-world' style='margin-left: 50px;'/>
+					<img src='' alt='whitleys-world' class='headerImg'/>
 					<br/>
 					<ul id='nav' class='nav'>
-						<li><a href='javascript:void(0)'>Home</a></li>
-						<li><a href='javascript:void(0)'>Stories</a></li>
-						<li><a href='javascript:void(0)'>About</a></li>
+						<li><a href='javascript:void(0)' class='links'>Home</a></li>
+						<li><a href='javascript:void(0)' class='links'>Stories</a></li>
+						<li><a href='javascript:void(0)' class='links'>About</a></li>
 					</ul>
 				</div>
 			</div>
 			<div id='content' class='inner content'>
 				<div class='contentWrapper'>
-				{% block content %}{% endblock content %}
+					<div class='contentText'>
+						{% block content %}{% endblock content %}
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat mi ipsum, nec interdum risus ornare interdum. Aliquam iaculis enim eget purus vehicula fringilla. Vestibulum ac dictum nulla. In et imperdiet ex. Praesent ac odio et felis rhoncus porttitor. Nullam sit amet cursus lectus. Nullam a dictum urna, vitae egestas erat. Morbi in euismod ex.
+						Integer elementum, nisl sit amet ultrices pharetra, lacus nisl feugiat diam, at bibendum ante nulla a risus. Nulla quis metus sollicitudin, hendrerit ex ut, varius lectus. Donec feugiat volutpat ex vitae blandit. Curabitur dapibus aliquam odio non vehicula. Etiam laoreet turpis id neque blandit gravida. Aenean viverra eros leo. Quisque a nisl rutrum, faucibus est eu, pellentesque lorem.
+						Fusce pharetra pharetra arcu non tincidunt. Praesent commodo dolor velit, nec placerat erat luctus a. Cras eget est id neque gravida laoreet. In varius semper lorem, at posuere est laoreet at. Nulla blandit, eros eu pulvinar volutpat, ante ante consequat mauris, quis ultricies arcu massa ac ligula. Mauris odio est, imperdiet vitae scelerisque sit amet, gravida id nulla. Nulla sit amet vulputate lectus. Etiam sit amet justo rhoncus, suscipit tortor nec, posuere tellus. Pellentesque lectus lectus, cursus ut finibus a, lobortis ac justo. Proin nisl neque, porttitor eget mauris sit amet, hendrerit tincidunt odio. Curabitur tortor ante, consequat eget laoreet quis, feugiat eget sapien. Ut imperdiet euismod quam, sed dignissim lorem gravida porttitor. In hac habitasse platea dictumst. Sed scelerisque a ex vitae ornare.
+						Etiam sed ornare dolor. Fusce sit amet ligula sit amet ligula convallis faucibus. Vivamus rutrum in ipsum vel posuere. Morbi tempus, nunc eu facilisis sagittis, mi ex posuere ipsum, eget mollis enim dolor sit amet lacus. Duis est lectus, blandit non tempor ac, pretium eget elit. Praesent lobortis vulputate rhoncus. Sed gravida nisi non erat interdum, at hendrerit est ultrices. Nulla facilisi. Etiam sem enim, tristique in nulla nec, lobortis vehicula sem. Integer sit amet vulputate leo. Praesent sit amet mi pellentesque nisi tempus sagittis vel nec justo.
+						Aliquam pellentesque laoreet diam, non suscipit ligula vehicula quis. In sagittis est metus, nec lacinia felis condimentum tempus. Maecenas accumsan iaculis justo, non hendrerit dolor condimentum ac. Nullam blandit erat nec suscipit mollis. Sed venenatis velit vitae nulla blandit, eget gravida est varius. Curabitur congue lacinia lacinia. Vivamus mattis velit felis, eget lacinia urna aliquam sit amet. Proin iaculis felis id dictum aliquam. Mauris molestie mollis leo, et elementum sem semper fringilla. Sed at dui ex. Cras placerat nisl tortor, id aliquam elit luctus in. Nullam tellus orci, malesuada a lobortis at, egestas a nulla. Praesent tempus eget elit quis pharetra. Phasellus at maximus mi. 
+					</div>
 				</div>
 			</div>
 			<div id='footer' class='inner footerBorder'>
 				<div id='footerBanner' class='wrapperBanner'>
-				<span style="color: grey; font-weight: lighter; font-size:75%; float:right; padding: 10px;">Created by: The Blob Works</span>
+				<span style="color: grey; font-weight: lighter; font-size:75%; float:right; padding: 10px;">Created by: The Blob Works Ltd.</span>
 				</div>
 			</div>	
 		</div>
