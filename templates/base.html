@@ -1,6 +1,94 @@
+<!DOCTYPE html>
 <html>
-    <head></head>
-    <body>
-    {% block content %}{% endblock %}
-    </body>
+	<head>
+		<meta charset="UTF-8">
+		<title>Whitleys World</title>
+		<style type="text/css">
+			html, body {
+            	height: 100%;
+            	margin: 0px;
+            	padding: 0px;
+        	}
+        	h1 {
+ 			   margin-top: 0;
+			}
+			.outer{
+				min-height: 100%;
+			}	
+			.inner {
+  				width:100%;
+			}
+			.content{
+				min-height:100%;
+			}
+			.wrapperBanner {
+				width: 80%;
+				height: 100%;
+				min-height: 100px;
+    			margin: 0 auto;
+    			background-color: red;
+			}
+			.contentWrapper{
+				width: 80%;
+				height: 100%;
+				min-height: 100%;
+    			margin: 0 auto;
+    			border-left: 1px dashed black;
+    			border-right: 1px dashed black;
+			}
+			.headerBorder{
+				border-bottom: 1px solid black;
+			}
+			.footerBorder{
+				border-top: 1px solid black;
+			}
+			#header{
+				min-height: 75px;
+			}
+			#footer{
+				min-height: 75px;
+			}
+			.nav{
+				margin: 0;
+				padding-top: 10px;
+			}
+			#nav li {
+				float: left;
+				padding: 10px;
+				list-style: none;
+			}
+		</style>
+		<!--[if lte IE 6]>
+	    <style type="text/css">
+        	.outer {
+            	height: 100%;
+        	}
+    	</style>
+    	<![endif]-->
+	</head>
+	<body>
+		<div id='page' class='outer'> 
+			<div id='header' class='inner headerBorder'>
+				<div id='headerBanner' class='wrapperBanner'>
+					<img src='' alt='whitleys-world' style='margin-left: 50px;'/>
+					<br/>
+					<ul id='nav' class='nav'>
+						<li><a href='javascript:void(0)'>Home</a></li>
+						<li><a href='javascript:void(0)'>Stories</a></li>
+						<li><a href='javascript:void(0)'>About</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id='content' class='inner content'>
+				<div class='contentWrapper'>
+				{% block content %}{% endblock content %}
+				</div>
+			</div>
+			<div id='footer' class='inner footerBorder'>
+				<div id='footerBanner' class='wrapperBanner'>
+				<span style="color: grey; font-weight: lighter; font-size:75%; float:right; padding: 10px;">Created by: The Blob Works</span>
+				</div>
+			</div>	
+		</div>
+	</body>
 </html>
