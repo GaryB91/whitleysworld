@@ -91,9 +91,17 @@
 					<img src='' alt='whitleys-world' class='headerImg'/>
 					<br/>
 					<ul id='nav' class='nav'>
-						<li><a href='javascript:void(0)' class='links'>Home</a></li>
-						<li><a href='javascript:void(0)' class='links'>Stories</a></li>
-						<li><a href='javascript:void(0)' class='links'>About</a></li>
+						<li><a href="{% url 'home:home' %}" class='links'>Home</a></li>
+						<li><a href="javascript:void(0)" class='links'>Stories</a></li>
+						<li><a href="{% url 'home:about' %}" class='links'>About</a></li>
+                                                {% if user.is_authenticated %}
+                                                <li><a href="{% url 'home:logout' %}" class="links">Logout</a></li>
+                                                {% else %}
+
+                                                <li><a href="{% url 'home:login' %}" class="links">Login</a></li>
+                                                
+                                                <li><a href="{% url 'home:register' %}" class="links">Register</a></li>
+                                                {% endif %}
 					</ul>
 				</div>
 			</div>
