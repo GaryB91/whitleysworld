@@ -92,14 +92,12 @@
 					<br/>
 					<ul id='nav' class='nav'>
 						<li><a href="{% url 'home:home' %}" class='links'>Home</a></li>
-						<li><a href="javascript:void(0)" class='links'>Stories</a></li>
+						<li><a href="{% url 'story:stories' %}" class='links'>Stories</a></li>
 						<li><a href="{% url 'home:about' %}" class='links'>About</a></li>
                                                 {% if user.is_authenticated %}
                                                 <li><a href="{% url 'home:logout' %}" class="links">Logout</a></li>
                                                 {% else %}
-
                                                 <li><a href="{% url 'home:login' %}" class="links">Login</a></li>
-                                                
                                                 <li><a href="{% url 'home:register' %}" class="links">Register</a></li>
                                                 {% endif %}
 					</ul>
@@ -109,11 +107,6 @@
 				<div class='contentWrapper'>
 					<div class='contentText'>
 						{% block content %}{% endblock content %}
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec consequat mi ipsum, nec interdum risus ornare interdum. Aliquam iaculis enim eget purus vehicula fringilla. Vestibulum ac dictum nulla. In et imperdiet ex. Praesent ac odio et felis rhoncus porttitor. Nullam sit amet cursus lectus. Nullam a dictum urna, vitae egestas erat. Morbi in euismod ex.
-						Integer elementum, nisl sit amet ultrices pharetra, lacus nisl feugiat diam, at bibendum ante nulla a risus. Nulla quis metus sollicitudin, hendrerit ex ut, varius lectus. Donec feugiat volutpat ex vitae blandit. Curabitur dapibus aliquam odio non vehicula. Etiam laoreet turpis id neque blandit gravida. Aenean viverra eros leo. Quisque a nisl rutrum, faucibus est eu, pellentesque lorem.
-						Fusce pharetra pharetra arcu non tincidunt. Praesent commodo dolor velit, nec placerat erat luctus a. Cras eget est id neque gravida laoreet. In varius semper lorem, at posuere est laoreet at. Nulla blandit, eros eu pulvinar volutpat, ante ante consequat mauris, quis ultricies arcu massa ac ligula. Mauris odio est, imperdiet vitae scelerisque sit amet, gravida id nulla. Nulla sit amet vulputate lectus. Etiam sit amet justo rhoncus, suscipit tortor nec, posuere tellus. Pellentesque lectus lectus, cursus ut finibus a, lobortis ac justo. Proin nisl neque, porttitor eget mauris sit amet, hendrerit tincidunt odio. Curabitur tortor ante, consequat eget laoreet quis, feugiat eget sapien. Ut imperdiet euismod quam, sed dignissim lorem gravida porttitor. In hac habitasse platea dictumst. Sed scelerisque a ex vitae ornare.
-						Etiam sed ornare dolor. Fusce sit amet ligula sit amet ligula convallis faucibus. Vivamus rutrum in ipsum vel posuere. Morbi tempus, nunc eu facilisis sagittis, mi ex posuere ipsum, eget mollis enim dolor sit amet lacus. Duis est lectus, blandit non tempor ac, pretium eget elit. Praesent lobortis vulputate rhoncus. Sed gravida nisi non erat interdum, at hendrerit est ultrices. Nulla facilisi. Etiam sem enim, tristique in nulla nec, lobortis vehicula sem. Integer sit amet vulputate leo. Praesent sit amet mi pellentesque nisi tempus sagittis vel nec justo.
-						Aliquam pellentesque laoreet diam, non suscipit ligula vehicula quis. In sagittis est metus, nec lacinia felis condimentum tempus. Maecenas accumsan iaculis justo, non hendrerit dolor condimentum ac. Nullam blandit erat nec suscipit mollis. Sed venenatis velit vitae nulla blandit, eget gravida est varius. Curabitur congue lacinia lacinia. Vivamus mattis velit felis, eget lacinia urna aliquam sit amet. Proin iaculis felis id dictum aliquam. Mauris molestie mollis leo, et elementum sem semper fringilla. Sed at dui ex. Cras placerat nisl tortor, id aliquam elit luctus in. Nullam tellus orci, malesuada a lobortis at, egestas a nulla. Praesent tempus eget elit quis pharetra. Phasellus at maximus mi. 
 					</div>
 				</div>
 			</div>
