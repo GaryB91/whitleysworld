@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %} 
+<br/>
+<ul>
+{% for story in object_list %}
+   <li>
+   {{ story.title }} - {{ story.date_published }}
+   <br/>
+   <a href="{% url 'story:page' story=story.slug page=1 %}">Read</a>
+   </li>
+{% empty %}
+    <li>No Stories yet.</li>
+{% endfor %}
+</ul>
+{% endblock %}

@@ -40,6 +40,7 @@ INSTALLED_APPS = [
 
     # built apps
     'home',
+    'story',
 ]
 
 MIDDLEWARE = [
