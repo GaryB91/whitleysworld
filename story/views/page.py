@@ -1,6 +1,6 @@
 from django.views import View
 from django.http import HttpResponseRedirect
-from django.shortcut import render
+from django.shortcuts import render
 
 from story.models import Page
 

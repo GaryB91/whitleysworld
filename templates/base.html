@@ -95,10 +95,10 @@
 						<li><a href="{% url 'story:stories' %}" class='links'>Stories</a></li>
 						<li><a href="{% url 'home:about' %}" class='links'>About</a></li>
                                                 {% if user.is_authenticated %}
-                                                <li><a href="{% url 'home:logout' %}" class="links">Logout</a></li>
+                                                	<li><a href="{% url 'home:logout' %}" class="links">Logout</a></li>
                                                 {% else %}
-                                                <li><a href="{% url 'home:login' %}" class="links">Login</a></li>
-                                                <li><a href="{% url 'home:register' %}" class="links">Register</a></li>
+                                                	<li><a href="{% url 'home:login' %}" class="links">Login</a></li>
+                                                	<li><a href="{% url 'home:register' %}" class="links">Register</a></li>
                                                 {% endif %}
 					</ul>
 				</div>
