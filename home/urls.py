@@ -6,6 +6,7 @@ from home.views.logout import LogoutView
 from home.views.register import RegisterView
 
 
+app_name = 'home'
 urlpatterns = [
     url(r'^$', HomeView.as_view(), name='home'),
     url(r'^about/$', AboutView.as_view(), name='about'),
