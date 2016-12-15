@@ -16,22 +16,14 @@ class LoginView(View):
 
     def get(self, request, *args, **kwargs):
         """ get handler """
-        context = self.get_context_data(
-            request, 
-            *args, 
-            **kwargs
-        )
+        context = {'form': LoginForm()}
         return render(request, self.template_name, context)
 
     def post(self, request, *args, **kwargs):
         """ post handler """
         
-        context = self.get_context_data(
-            request,
-            *args,
-            **kwargs
-        )
-        form = context.get('form')
+        form = LoginForm(data=request.POST)
+	context = {'form': form}
 
         if form and form.is_valid():
             user = authenticate(
