@@ -93,7 +93,7 @@
 					<ul id='nav' class='nav'>
 						<li><a href="{% url 'home:home' %}" class='links'>Home</a></li>
 						<li><a href="{% url 'story:stories' %}" class='links'>Stories</a></li>
-						<li><a href="{% url 'home:about' %}" class='links'>About</a></li>
+						{# <li><a href="{% url 'home:about' %}" class='links'>About</a></li> #}
                                                 {% if user.is_authenticated %}
                                                 	<li><a href="{% url 'home:logout' %}" class="links">Logout</a></li>
                                                 {% else %}
