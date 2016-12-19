@@ -5,13 +5,13 @@
 {{ page.content }}
 
 {% if has_previous %}
-<a href="{% url 'story:page' story=story.slug page=page.number-1 %}" >Previous</a>
+<a href="{% url 'story:page' story=story.slug page=page.number|add:"-1" %}" >Previous</a>
 {% endif %}
 
 <a href="{% url 'story:stories' %}" >Home</a>
 
 {% if has_next %}
-<a href="{% url 'story:page' story=story.slug page=page.number+1 %}" >Next</a>
+<a href="{% url 'story:page' story=story.slug page=page.number|add:"1" %}" >Next</a>
 {% endif %}
 
 {% endblock %}
