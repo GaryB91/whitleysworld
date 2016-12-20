@@ -5,12 +5,12 @@ from story.models import Page
 
 class StoryAdmin(admin.ModelAdmin):
 	"""story admin"""
-	pass
+	prepopulated_fields = {"slug": ("title",)} 
 admin.site.register(Story, StoryAdmin)
 
 
 class PageAdmin(admin.ModelAdmin):
 	"""page admin"""
-	pass
+	raw_id_fields = ["story"]
 admin.site.register(Page, PageAdmin)
 
